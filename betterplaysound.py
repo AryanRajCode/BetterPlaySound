@@ -3,7 +3,7 @@ import sys
 import os
 import platform
 import subprocess
-
+# detect os 
 def get_system():
   
     system = platform.system()
@@ -15,7 +15,7 @@ def get_system():
         return "Linux"
     else:
         return "Other"
-
+# playsound using pygame
 def playsound(file, volume=0.7):
   
     try:
@@ -32,7 +32,7 @@ def playsound(file, volume=0.7):
         print(f"Error playing sound: {e}")
     finally:
         mixer.quit()
-
+# using subprocess
 def sysplay(file):
 
     system = get_system()
@@ -47,7 +47,7 @@ def sysplay(file):
             print("Unsupported operating system")
     except Exception as e:
         print(f"Error playing sound on system: {e}")
-
+# args
 def main():
   
     if len(sys.argv) > 1:
