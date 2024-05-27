@@ -5,11 +5,7 @@ import platform
 import subprocess
 
 def get_system():
-    """
-    Detect the operating system.
-    Returns:
-        str: The name of the operating system.
-    """
+  
     system = platform.system()
     if system == 'Windows':
         return "Windows"
