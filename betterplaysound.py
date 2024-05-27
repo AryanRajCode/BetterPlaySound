@@ -21,13 +21,7 @@ def get_system():
         return "Other"
 
 def playsound(file, volume=0.7):
-    """
-    Play a sound file with the specified volume using pygame mixer.
-    
-    Args:
-        file (str): Path to the sound file.
-        volume (float): Volume level (default is 0.7).
-    """
+  
     try:
         mixer.init()
         mixer.music.load(file)
@@ -44,12 +38,7 @@ def playsound(file, volume=0.7):
         mixer.quit()
 
 def sysplay(file):
-    """
-    Play a sound file using the system's default application.
-    
-    Args:
-        file (str): Path to the sound file.
-    """
+
     system = get_system()
     try:
         if system == "Windows":
@@ -64,9 +53,7 @@ def sysplay(file):
         print(f"Error playing sound on system: {e}")
 
 def main():
-    """
-    Main function to play a sound file from the command line.
-    """
+  
     if len(sys.argv) > 1:
         audio_file = sys.argv[1]
         if os.path.exists(audio_file):
