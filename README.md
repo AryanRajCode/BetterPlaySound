@@ -1,7 +1,8 @@
 # BetterPlaySound
 Better Playsound is python module to play audio
 
-Use  pip install betterplaysound
+Use  
+# pip install betterplaysound
 
 in python file 
 use 
